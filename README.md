@@ -6,6 +6,7 @@ This project is an attempt to clone the Disney+ App. It is so far built with Rea
 
 
 <img src="./public/screenshots/Screenshot1.png"/>
+<img src="./public/screenshots/Screenshot8.png"/>
 <img src="./public/screenshots/Screenshot2.png"/>
 <img src="./public/screenshots/Screenshot3.png"/>
 <br/>
@@ -13,7 +14,7 @@ This project is an attempt to clone the Disney+ App. It is so far built with Rea
 <img src="./public/screenshots/Screenshot5.png"/>
 <img src="./public/screenshots/Screenshot6.png"/>
 <img src="./public/screenshots/Screenshot7.png"/>
-<img src="./public/screenshots/Screenshot8.png"/>
+
 <img src="./public/screenshots/Screenshot9.png"/>
 <img src="./public/screenshots/Screenshot1.png"/>
 
