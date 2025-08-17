@@ -1,11 +1,14 @@
+# Disney-plus-clone
 
 ## About The Project
 
 This project is an attempt to clone the Disney+ App. It is so far built with React, Redux Toolkit, React Router, Tanstack Query, Vite, styled components, Material UI, Framer Motion, Firebase, the TMDB API and other third-party libraries such as React Spinners. Moreover, it is fully responsive and follows the mobile-first concept.
 
 
-<img src="./src/screenshots1.png"/>
-<img src="./public/screenshots/screenshots1.png"/>
+<img src="./src/Screenshot1.png"/>
+<img src="./public/screenshots/Screenshot1.png"/>
+![App Screenshot](/Screenshot1.png)
+
 
 
 
@@ -13,7 +16,7 @@ This project is an attempt to clone the Disney+ App. It is so far built with Rea
 
 LinkedIn - [Nikhil Khare](https://www.linkedin.com/in/nikhil-khare-b058aa237/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -91,4 +94,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # run :-
 
 npm start
-# Disney-plus-clone
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
