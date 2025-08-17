@@ -88,3 +88,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 npm start
 # Disney-plus-clone
+
+
+<!-- CONTACT -->
+
+## Contact
+
+LinkedIn - [Nikhil Khare]([https://www.linkedin.com/in/malgorzatakwiecien00/](https://www.linkedin.com/in/nikhil-khare-b058aa237/))
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
