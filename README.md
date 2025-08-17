@@ -1,3 +1,18 @@
+# Disney Plus Clone Readme
+
+
+## About The Project
+This project is an attempt to clone the Disney+ App. It is so far built with React, Redux Toolkit, React Router, Tanstack Query, Vite, styled components, Material UI, Framer Motion, Firebase, the TMDB API and other third-party libraries such as React Spinners. Moreover, it is fully responsive and follows the mobile-first concept.
+
+
+
+
+
+
+## Description
+This is the ReactJS Disney Plus Clone, the perfect project to put on your portfolio by Clever Programmer.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
