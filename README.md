@@ -5,9 +5,18 @@
 This project is an attempt to clone the Disney+ App. It is so far built with React, Redux Toolkit, React Router, Tanstack Query, Vite, styled components, Material UI, Framer Motion, Firebase, the TMDB API and other third-party libraries such as React Spinners. Moreover, it is fully responsive and follows the mobile-first concept.
 
 
-<img src="./src/Screenshot1.png"/>
 <img src="./public/screenshots/Screenshot1.png"/>
-![App Screenshot](/Screenshot1.png)
+<img src="./public/screenshots/Screenshot2.png"/>
+<img src="./public/screenshots/Screenshot3.png"/>
+<br/>
+<img src="./public/screenshots/Screenshot4.png"/>
+<img src="./public/screenshots/Screenshot5.png"/>
+<img src="./public/screenshots/Screenshot6.png"/>
+<img src="./public/screenshots/Screenshot7.png"/>
+<img src="./public/screenshots/Screenshot8.png"/>
+<img src="./public/screenshots/Screenshot9.png"/>
+<img src="./public/screenshots/Screenshot1.png"/>
+
 
 
 
