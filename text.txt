@@ -51,3 +51,11 @@ impotened note
 2. try to add search bar  ok 
 3. add footer ok
 ok
+
+<----- IMPORTANT -------------> to do 
+Fix 3 — Add Vercel domain to Firebase Console
+Go to Firebase Console → Authentication → Settings → Authorized domains and add:
+disney-plus-clone-ten-gamma.vercel.app
+This fixes the auth/unauthorized-domain error you see in Image 3.
+
+run - npm run start 

@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from 'react-router-dom';
-import { auth, provider } from "../firebase";
+// import { useHistory } from 'react-router-dom';
+import { auth } from "../firebase";
+
+import { handleSignIn } from "../firebase";
+import toast from 'react-hot-toast';
+
 import {
   selectUserName,
   selectUserPhoto,
@@ -12,37 +16,31 @@ import {
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
 
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
-        setUser(user);
-        history.push("/home");
+        setUser(user);  // — fixes refresh logout bug
       }
     });
-  }, [userName]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleAuth = () => {
     if (!userName) {
-      auth
-        .signInWithPopup(provider)
+      handleSignIn()                    // ✅ use this instead of auth.signInWithPopup
         .then((result) => {
-          setUser(result.user);
+          if (result) setUser(result.user);  // redirect won't return result, that's ok
         })
         .catch((error) => {
-          alert(error.message);
+          // alert(error.message);
+          toast.error(error.message);
         });
-    } else if (userName) {
-      auth
-        .signOut()
-        .then(() => {
-          dispatch(setSignOutState());
-          history.push("/");
-        })
-        .catch((err) => alert(err.message));
+    } else {
+      auth.signOut().then(() => dispatch(setSignOutState()));
     }
   };
 
@@ -62,43 +60,33 @@ const Header = (props) => {
         <img src="/images/logo.svg" alt="Disney+" />
       </Logo>
 
+      {/* ✅ NavMenu always visible */}
+      <NavMenu>
+        <a href="/home"><img src="/images/home-icon.svg" alt="HOME" /><span>HOME</span></a>
+        <a href="/search">
+          <img src="/images/search-icon.svg" alt="SEARCH" />
+          <span>SEARCH</span>
+        </a>
+        <a href="/home"><img src="/images/watchlist-icon.svg" alt="WATCHLIST" /><span>WATCHLIST</span></a>
+        <a href="/home"><img src="/images/original-icon.svg" alt="ORIGINALS" /><span>ORIGINALS</span></a>
+        <a href="/home"><img src="/images/movie-icon.svg" alt="MOVIES" /><span>MOVIES</span></a>
+        <a href="/home"><img src="/images/series-icon.svg" alt="SERIES" /><span>SERIES</span></a>
+        <a href="https://github.com/NikhilKhare973/Disney-plus-clone" target="_blank" rel="noreferrer">
+          <img src="/images/original-icon.svg" alt="GitHub" />
+          <span>GitHub</span>
+        </a>
+      </NavMenu>
+
+      {/* Login OR SignOut based on auth state */}
       {!userName ? (
         <Login onClick={handleAuth}>Login</Login>
       ) : (
-        <>
-          <NavMenu>
-            <a href="/home">
-              <img src="/images/home-icon.svg" alt="HOME" />
-              <span>HOME</span>
-            </a>
-            <a href="/home">
-              <img src="/images/search-icon.svg" alt="SEARCH" />
-              <span>SEARCH</span>
-            </a>
-            <a href="/home">
-              <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
-              <span>WATCHLIST</span>
-            </a>
-            <a href="/home">
-              <img src="/images/original-icon.svg" alt="ORIGINALS" />
-              <span>ORIGINALS</span>
-            </a>
-            <a href="/home">
-              <img src="/images/movie-icon.svg" alt="MOVIES" />
-              <span>MOVIES</span>
-            </a>
-            <a href="/home">
-              <img src="/images/series-icon.svg" alt="SERIES" />
-              <a href='https://github.com/NikhilKhare973/Disney-plus-clone' target="_blank">  <span>Githun link</span> </a>
-            </a>
-          </NavMenu>
-          <SignOut>
-            <UserImg src={userPhoto} alt={userName} />
-            <DropDown>
-              <span onClick={handleAuth}>Sign out</span>
-            </DropDown>
-          </SignOut>
-        </>
+        <SignOut>
+          <UserImg src={userPhoto} alt={userName} />
+          <DropDown>
+            <span onClick={handleAuth}>Sign out</span>
+          </DropDown>
+        </SignOut>
       )}
     </Nav>
   );

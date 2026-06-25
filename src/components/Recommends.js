@@ -33,6 +33,7 @@ const Content = styled.div`
   grid-gap: 25px;
   gap: 25px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 10px;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -61,6 +62,16 @@ const Wrap = styled.div`
     width: 100%;
     z-index: 1;
     top: 0;
+  }
+  
+  h4 {
+    position: absolute;
+    
+    transform: translateY(-50%);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   &:hover {

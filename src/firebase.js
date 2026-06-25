@@ -3,7 +3,7 @@
 
 import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
@@ -32,7 +32,16 @@ const db = firebaseApp.firestore();
 const provider = new GoogleAuthProvider();
 const storage = firebase.storage();
 
-signInWithPopup(auth, provider);
+
+
+export const handleSignIn = () => {
+  const isLocalhost = window.location.hostname === "localhost";
+  if (isLocalhost) {
+    return signInWithPopup(auth, provider);   // ✅ correct modular syntax
+  } else {
+    return signInWithRedirect(auth, provider); // ✅ works on Vercel
+  }
+};
 
 export { auth, provider, storage };
 export default db;

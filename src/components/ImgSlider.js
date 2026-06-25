@@ -15,27 +15,27 @@ const ImgSlider = (props) => {
   return (
     <Carousel {...settings}>
       <Wrap>
-        <a>
+        <button>
           <img src="/images/slider-badging.jpg" alt="" />
-        </a>
+        </button>
       </Wrap>
 
       <Wrap>
-        <a>
+        <button>
           <img src="/images/slider-scale.jpg" alt="" />
-        </a>
+        </button>
       </Wrap>
 
       <Wrap>
-        <a>
+        <button>
           <img src="/images/slider-badag.jpg" alt="" />
-        </a>
+        </button>
       </Wrap>
 
       <Wrap>
-        <a>
+        <button>
           <img src="/images/slider-scales.jpg" alt="" />
-        </a>
+        </button>
       </Wrap>
     </Carousel>
   );
@@ -80,23 +80,29 @@ const Carousel = styled(Slider)`
   }
 `;
 
+
+
 const Wrap = styled.div`
   border-radius: 4px;
   cursor: pointer;
   position: relative;
 
-  a {
+  button {
+    border: none;
+    background: none;
+    padding: 4px;
     border-radius: 4px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
       rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     cursor: pointer;
     display: block;
     position: relative;
-    padding: 4px;
+    width: 100%;
 
     img {
       width: 100%;
       height: 100%;
+      display: block;
     }
 
     &:hover {
