@@ -1,17 +1,25 @@
-# Disney Plus Clone Readme
-
+# Disney-plus-clone
 
 ## About The Project
+
 This project is an attempt to clone the Disney+ App. It is so far built with React, Redux Toolkit, React Router, Tanstack Query, Vite, styled components, Material UI, Framer Motion, Firebase, the TMDB API and other third-party libraries such as React Spinners. Moreover, it is fully responsive and follows the mobile-first concept.
 
+<img src="./public/screenshots/Screenshot1.png"/>
+<img src="./public/screenshots/Screenshot8.png"/>
+<img src="./public/screenshots/Screenshot2.png"/>
+<img src="./public/screenshots/Screenshot3.png"/>
+<br/>
+<img src="./public/screenshots/Screenshot4.png"/>
+<img src="./public/screenshots/Screenshot5.png"/>
+<img src="./public/screenshots/Screenshot6.png"/>
+<img src="./public/screenshots/Screenshot7.png"/>
 
+<img src="./public/screenshots/Screenshot9.png"/>
+<img src="./public/screenshots/Screenshot1.png"/>
 
+## Contact
 
-
-
-## Description
-This is the ReactJS Disney Plus Clone, the perfect project to put on your portfolio by Clever Programmer.
-
+LinkedIn - [Nikhil Khare](https://www.linkedin.com/in/nikhil-khare-b058aa237/)
 
 # Getting Started with Create React App
 
@@ -87,13 +95,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # run :-
 
 npm start
-# Disney-plus-clone
-
-
-<!-- CONTACT -->
-
-## Contact
-
-LinkedIn - [Nikhil Khare](https://www.linkedin.com/in/nikhil-khare-b058aa237/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
