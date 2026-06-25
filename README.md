@@ -15,7 +15,7 @@ This project is an attempt to clone the Disney+ App. It is so far built with Rea
 <img src="./public/screenshots/Screenshot7.png"/>
 
 <img src="./public/screenshots/Screenshot9.png"/>
-<img src="./public/screenshots/Screenshot1.png"/>
+<img src="./public/screenshots/Screenshot10.png"/>
 
 ## Contact
 
@@ -97,3 +97,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 npm start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<img src="./public/screenshots/Screenshot11.png"/>
+<img src="./public/screenshots/Screenshot12.png"/>
+
+<img src="./public/screenshots/Screenshot13.png"/>
+<img src="./public/screenshots/Screenshot14.png"/>
